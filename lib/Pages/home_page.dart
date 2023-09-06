@@ -156,4 +156,37 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  Widget _destinati(BuildContext _context) {
+    return Expanded(
+      child: ListView.builder(
+        itemCount: articles.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.only(bottom: _deviceWidht! * 0.05),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Container(
+                height: _deviceHeight! * 0.30,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(articles[index].image),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black45,
+                      spreadRadius: 2,
+                      blurRadius: 20,
+                      offset: Offset(0, 6),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
 }
