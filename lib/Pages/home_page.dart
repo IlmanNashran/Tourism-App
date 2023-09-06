@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../data.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -42,9 +43,11 @@ class _HomePageState extends State<HomePage> {
         Padding(
           padding: EdgeInsets.only(
             top: _deviceHeight! * 0.03,
+            bottom: _deviceHeight! * 0.03,
           ),
           child: _locationsBarWidget(_context),
         ),
+        _destinationList(_context),
       ],
     );
   }
@@ -116,6 +119,40 @@ class _HomePageState extends State<HomePage> {
             ],
           );
         }).toList(),
+      ),
+    );
+  }
+
+//list destination image
+  Widget _destinationList(BuildContext _context) {
+    return Expanded(
+      child: ListView.builder(
+        itemCount: articles.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.only(bottom: _deviceWidht! * 0.05),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Container(
+                height: _deviceHeight! * 0.30,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(articles[index].image),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black45,
+                      spreadRadius: 2,
+                      blurRadius: 20,
+                      offset: Offset(0, 6),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

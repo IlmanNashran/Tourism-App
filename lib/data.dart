@@ -15,7 +15,7 @@ class Article {
 List<Article> articles = [
   Article(
       'Japan\'s second largest metropolitan area',
-      'https://images.wallpaperscraft.com/image/pagoda_architecture_sunlight_131905_1920x1080.jpg',
+      'https://assets.nst.com.my/images/articles/FH264_1682489782.jpg',
       100,
       32000,
       true,
@@ -24,7 +24,7 @@ List<Article> articles = [
       'Hussain Mustafa'),
   Article(
       'Known as the sleepless town for obvious reasons',
-      'https://images.wallpaperscraft.com/image/night_lights_buildings_railway_station_ueno_tokyo_59511_1920x1080.jpg',
+      'https://assets.nst.com.my/images/articles/FH264_1682489782.jpg',
       300,
       50000,
       true,
@@ -33,7 +33,7 @@ List<Article> articles = [
       'Tim Salvatore'),
   Article(
       'Japan\'s second largest metropolitan area',
-      'https://images.wallpaperscraft.com/image/street_neon_night_city_139596_1920x1080.jpg',
+      'https://assets.nst.com.my/images/articles/FH264_1682489782.jpg',
       200,
       10000,
       true,
